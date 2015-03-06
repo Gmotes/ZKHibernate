@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    
+     <window id="zkspringjpaexampleListing" title="Users List"
+        height="90%" border="normal" apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('com.i2i.zk.zkhibernate.SpringTest')">
+        <separator />
+        <listbox id="" mold="paging" pageSize="11" pagingPosition="top"
+            model="@load(vm.examplesListData)">
+            <listhead sizable="true">
+                <listheader label="First Name" sort="auto(ad)" />
+                <listheader label="Last Name" sortDirection="ascending"
+                    sort="auto(soyad)" />
+            </listhead>
+            <template name="model" var="p1">
+                <listitem>
+                    <listcell label="@load(p1.ad)" />
+                    <listcell label="@load(p1.soyad)" />
+                </listitem>
+            </template>
+        </listbox>
+    </window>
+
+
+</zk>
