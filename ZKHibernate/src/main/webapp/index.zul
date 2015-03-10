@@ -7,7 +7,7 @@
         viewModel="@id('vm') @init('com.i2i.zk.zkhibernate.SpringTest')">
         <separator />
         <listbox id="" mold="paging" pageSize="11" pagingPosition="top"
-            model="@load(vm.examplesListData)">
+            model="@load(vm.studentListData)">
             <listhead sizable="true">
                 <listheader label="First Name" sort="auto(ad)" />
                 <listheader label="Last Name" sortDirection="ascending"
